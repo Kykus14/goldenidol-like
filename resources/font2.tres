@@ -1,0 +1,5 @@
+[gd_resource type="SystemFont" format=3 uid="uid://bn20ji0h6b0c2"]
+
+[resource]
+font_names = PackedStringArray("Century Gothic")
+font_weight = 425

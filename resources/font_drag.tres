@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bg4j71xda3yjv"]
+
+[sub_resource type="SystemFont" id="SystemFont_3617b"]
+font_names = PackedStringArray("Century Gothic")
+font_weight = 425
+
+[resource]
+font = SubResource("SystemFont_3617b")
+font_size = 19
+font_color = Color(0, 0, 0, 1)
