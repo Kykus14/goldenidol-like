@@ -1,3 +1,3 @@
 extends Node
 
-signal filled
+signal solved

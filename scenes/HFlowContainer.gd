@@ -92,6 +92,7 @@ func verify() -> void:
 		label_2.hide()
 		color_rect.show()
 		label_3.hide()
+		Global.solved.emit()
 	elif answers.values().count(2) == 5 and !answers.values().has(0):
 		label_2.show()		
 		color_rect.hide()

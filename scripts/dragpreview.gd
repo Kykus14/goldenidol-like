@@ -15,6 +15,7 @@ func _ready() -> void:
 		add_theme_stylebox_override("normal", name_style)
 		add_theme_stylebox_override("hover", name_style)
 	
+	
 func _process(delta) -> void:
 	global_position = get_global_mouse_position()
 	if Input.is_action_just_released("left_click"):

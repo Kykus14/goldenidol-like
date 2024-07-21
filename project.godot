@@ -30,3 +30,4 @@ left_click={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=2
+renderer/rendering_method="mobile"

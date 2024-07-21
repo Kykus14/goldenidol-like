@@ -12,7 +12,9 @@ signal correct
 signal incorrect
 signal empty
 
+
 func _ready() -> void:
+	Global.solved.connect(solved)
 	pressed.connect(_on_pressed)
 	if type == Type.VERB:
 		add_theme_stylebox_override("normal", verb_style)
@@ -42,3 +44,6 @@ func verify() -> void:
 		correct.emit()
 	elif text != "":
 		incorrect.emit()
+		
+func solved(): 
+	add_theme_stylebox_override("normal", StyleBoxEmpty.new())

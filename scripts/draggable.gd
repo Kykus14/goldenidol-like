@@ -11,6 +11,8 @@ const name_style = preload("res://resources/things.tres")
 const blank_style = preload("res://resources/blank.tres")
 const FONT = preload("res://resources/font.tres")
 
+var sizetween: Tween
+
 func _ready():
 	mouse_entered.connect(_on_mouse_entered)
 	mouse_exited.connect(_on_mouse_exited)
@@ -60,15 +62,23 @@ func _can_drop_data(at_position, data):
 	
 func _drop_data(at_position, data):
 	return true
+
+func start_tween():
+	if sizetween:
+		sizetween.kill()
+		
+	sizetween = get_tree().create_tween()
+		
 	
 func _on_mouse_entered():
 	if get_theme_stylebox("normal") != blank_style:
-		var sizetween = get_tree().create_tween()
+		start_tween()
 		pivot_offset = Vector2(size.x/2, size.y/2)
-		sizetween.tween_property(self, "scale", Vector2(1.2,1.2), 0.05).set_trans(Tween.TRANS_BOUNCE)
-		sizetween.tween_property(self, "scale", Vector2(1.1,1.1), 0.05).set_trans(Tween.TRANS_BOUNCE)
+		sizetween.tween_property(self, "scale", Vector2(1.2,1.2), 0.08).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_IN_OUT)
+		sizetween.tween_property(self, "scale", Vector2(1.1,1.1), 0.05).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_IN_OUT)
 
 func _on_mouse_exited():
 	if StyleBox != blank_style:
-		var sizetween = get_tree().create_tween()
-		sizetween.tween_property(self, "scale", Vector2(1,1), 0.05).set_trans(Tween.TRANS_ELASTIC)
+		start_tween()
+		#var sizetween = get_tree().create_tween()
+		sizetween.tween_property(self, "scale", Vector2(1,1), 0.08).set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_IN_OUT)
