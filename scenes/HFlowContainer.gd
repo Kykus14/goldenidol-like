@@ -4,6 +4,7 @@ var answers := {"HENRY": 0, "DETECTIVE": 0, "CASE": 0, "CLUES": 0, "MURDER": 0, 
 var list := []
 var list2 := []
 @onready var color_rect = $"../../ColorRect"
+@onready var label_3 = $"../Label3"
 
 @onready var label_2 = $"../Label2"
 
@@ -11,6 +12,7 @@ var list2 := []
 func _ready() -> void:
 	color_rect.hide()
 	label_2.hide()
+	label_3.hide()
 	get_child(1).correct.connect(adding1)
 	get_child(3).correct.connect(adding2)
 	get_child(5).correct.connect(adding3)
@@ -89,6 +91,16 @@ func verify() -> void:
 	if answers.values().count(2) == 6:
 		label_2.hide()
 		color_rect.show()
+		label_3.hide()
 	elif answers.values().count(2) == 5 and !answers.values().has(0):
 		label_2.show()		
 		color_rect.hide()
+		label_3.hide()
+	elif answers.values().count(2) == 4 and !answers.values().has(0):
+		label_2.hide()		
+		color_rect.hide()
+		label_3.show()
+	if answers.values().has(0):
+		label_2.hide()		
+		color_rect.hide()
+		label_3.hide()

@@ -698,7 +698,6 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_op3f6")
 
 [node name="Label2" type="Label" parent="MarginContainer/Journal/Slots/MarginContainer"]
-visible = false
 layout_mode = 2
 offset_left = 10.0
 offset_top = 221.0
@@ -710,6 +709,20 @@ text = "
 
 
 Almost right... one of the answers is incorrect!"
+label_settings = ExtResource("3_j2iv2")
+
+[node name="Label3" type="Label" parent="MarginContainer/Journal/Slots/MarginContainer"]
+layout_mode = 2
+offset_left = 10.0
+offset_top = 221.0
+offset_right = 440.0
+offset_bottom = 386.0
+text = "
+
+
+
+
+Two of my answers aren't correct..."
 label_settings = ExtResource("3_j2iv2")
 
 [node name="HFlowContainer" type="HFlowContainer" parent="MarginContainer/Journal/Slots/MarginContainer"]
