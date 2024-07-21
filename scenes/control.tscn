@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://scripts/slot.gd" id="3_4nshe"]
 [ext_resource type="LabelSettings" uid="uid://clguyonkjm2v7" path="res://resources/font.tres" id="3_j2iv2"]
 [ext_resource type="SystemFont" uid="uid://bn20ji0h6b0c2" path="res://resources/font2.tres" id="5_x05px"]
-[ext_resource type="Script" path="res://scripts/answers.gd" id="6_0napa"]
+[ext_resource type="Script" path="res://scenes/HFlowContainer.gd" id="6_e0fxi"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0iw75"]
 
@@ -31,10 +31,7 @@ font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8piws"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_x1cej"]
-font = ExtResource("5_x05px")
-font_size = 28
-font_color = Color(0, 0, 0, 1)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_op3f6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hn2oj"]
 
@@ -71,19 +68,19 @@ theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
-[node name="Slots" type="HBoxContainer" parent="MarginContainer"]
+[node name="Journal" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 100
 
-[node name="Draggables" type="VBoxContainer" parent="MarginContainer/Slots"]
+[node name="Draggables" type="VBoxContainer" parent="MarginContainer/Journal"]
 layout_mode = 2
 
-[node name="Verbs" type="Panel" parent="MarginContainer/Slots/Draggables"]
+[node name="Verbs" type="Panel" parent="MarginContainer/Journal/Draggables"]
 custom_minimum_size = Vector2(500, 200)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_0iw75")
 
-[node name="Caption" type="Label" parent="MarginContainer/Slots/Draggables/Verbs"]
+[node name="Caption" type="Label" parent="MarginContainer/Journal/Draggables/Verbs"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -93,7 +90,7 @@ text = "VERBS:"
 label_settings = SubResource("LabelSettings_qak6a")
 horizontal_alignment = 1
 
-[node name="VerbContainer" type="HFlowContainer" parent="MarginContainer/Slots/Draggables/Verbs"]
+[node name="VerbContainer" type="HFlowContainer" parent="MarginContainer/Journal/Draggables/Verbs"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -104,7 +101,7 @@ offset_right = 19.0
 offset_bottom = 1.0
 script = ExtResource("3_3sxyp")
 
-[node name="Solve" type="Button" parent="MarginContainer/Slots/Draggables/Verbs/VerbContainer"]
+[node name="Solve" type="Button" parent="MarginContainer/Journal/Draggables/Verbs/VerbContainer"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 0)
@@ -121,7 +118,7 @@ script = ExtResource("1_xmeyt")
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Murder" type="Button" parent="MarginContainer/Slots/Draggables/Verbs/VerbContainer"]
+[node name="Murder" type="Button" parent="MarginContainer/Journal/Draggables/Verbs/VerbContainer"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_vertical = 3
@@ -138,7 +135,7 @@ script = ExtResource("1_xmeyt")
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Button" type="Button" parent="MarginContainer/Slots/Draggables/Verbs/VerbContainer" groups=["blank_verb"]]
+[node name="Button" type="Button" parent="MarginContainer/Journal/Draggables/Verbs/VerbContainer" groups=["blank_verb"]]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_vertical = 3
@@ -155,7 +152,7 @@ type = 3
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Button2" type="Button" parent="MarginContainer/Slots/Draggables/Verbs/VerbContainer" groups=["blank_verb"]]
+[node name="Button2" type="Button" parent="MarginContainer/Journal/Draggables/Verbs/VerbContainer" groups=["blank_verb"]]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_vertical = 3
@@ -172,7 +169,7 @@ type = 3
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Button3" type="Button" parent="MarginContainer/Slots/Draggables/Verbs/VerbContainer" groups=["blank_verb"]]
+[node name="Button3" type="Button" parent="MarginContainer/Journal/Draggables/Verbs/VerbContainer" groups=["blank_verb"]]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_vertical = 3
@@ -189,7 +186,7 @@ type = 3
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Button4" type="Button" parent="MarginContainer/Slots/Draggables/Verbs/VerbContainer" groups=["blank_verb"]]
+[node name="Button4" type="Button" parent="MarginContainer/Journal/Draggables/Verbs/VerbContainer" groups=["blank_verb"]]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_vertical = 3
@@ -206,7 +203,7 @@ type = 3
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Button5" type="Button" parent="MarginContainer/Slots/Draggables/Verbs/VerbContainer" groups=["blank_verb"]]
+[node name="Button5" type="Button" parent="MarginContainer/Journal/Draggables/Verbs/VerbContainer" groups=["blank_verb"]]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_vertical = 3
@@ -223,7 +220,7 @@ type = 3
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Button6" type="Button" parent="MarginContainer/Slots/Draggables/Verbs/VerbContainer" groups=["blank_verb"]]
+[node name="Button6" type="Button" parent="MarginContainer/Journal/Draggables/Verbs/VerbContainer" groups=["blank_verb"]]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_vertical = 3
@@ -240,7 +237,7 @@ type = 3
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Button7" type="Button" parent="MarginContainer/Slots/Draggables/Verbs/VerbContainer" groups=["blank_verb"]]
+[node name="Button7" type="Button" parent="MarginContainer/Journal/Draggables/Verbs/VerbContainer" groups=["blank_verb"]]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_vertical = 3
@@ -257,7 +254,7 @@ type = 3
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Button8" type="Button" parent="MarginContainer/Slots/Draggables/Verbs/VerbContainer" groups=["blank_verb"]]
+[node name="Button8" type="Button" parent="MarginContainer/Journal/Draggables/Verbs/VerbContainer" groups=["blank_verb"]]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_vertical = 3
@@ -274,7 +271,7 @@ type = 3
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Button9" type="Button" parent="MarginContainer/Slots/Draggables/Verbs/VerbContainer" groups=["blank_verb"]]
+[node name="Button9" type="Button" parent="MarginContainer/Journal/Draggables/Verbs/VerbContainer" groups=["blank_verb"]]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_vertical = 3
@@ -291,12 +288,12 @@ type = 3
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Concepts" type="Panel" parent="MarginContainer/Slots/Draggables"]
+[node name="Concepts" type="Panel" parent="MarginContainer/Journal/Draggables"]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_vgvu2")
 
-[node name="Caption" type="Label" parent="MarginContainer/Slots/Draggables/Concepts"]
+[node name="Caption" type="Label" parent="MarginContainer/Journal/Draggables/Concepts"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -306,7 +303,7 @@ text = "CONCEPTS:"
 label_settings = SubResource("LabelSettings_qak6a")
 horizontal_alignment = 1
 
-[node name="ConceptsContainer" type="HFlowContainer" parent="MarginContainer/Slots/Draggables/Concepts"]
+[node name="ConceptsContainer" type="HFlowContainer" parent="MarginContainer/Journal/Draggables/Concepts"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -317,7 +314,7 @@ offset_right = 20.0
 offset_bottom = 1.0
 script = ExtResource("3_3sxyp")
 
-[node name="Case" type="Button" parent="MarginContainer/Slots/Draggables/Concepts/ConceptsContainer"]
+[node name="Case" type="Button" parent="MarginContainer/Journal/Draggables/Concepts/ConceptsContainer"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_vertical = 3
@@ -335,7 +332,7 @@ type = 1
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Detective" type="Button" parent="MarginContainer/Slots/Draggables/Concepts/ConceptsContainer"]
+[node name="Detective" type="Button" parent="MarginContainer/Journal/Draggables/Concepts/ConceptsContainer"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -354,7 +351,7 @@ type = 1
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Clues" type="Button" parent="MarginContainer/Slots/Draggables/Concepts/ConceptsContainer"]
+[node name="Clues" type="Button" parent="MarginContainer/Journal/Draggables/Concepts/ConceptsContainer"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -373,7 +370,7 @@ type = 1
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Button" type="Button" parent="MarginContainer/Slots/Draggables/Concepts/ConceptsContainer"]
+[node name="Button" type="Button" parent="MarginContainer/Journal/Draggables/Concepts/ConceptsContainer"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_vertical = 3
@@ -390,7 +387,7 @@ type = 3
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Button2" type="Button" parent="MarginContainer/Slots/Draggables/Concepts/ConceptsContainer"]
+[node name="Button2" type="Button" parent="MarginContainer/Journal/Draggables/Concepts/ConceptsContainer"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_vertical = 3
@@ -407,7 +404,7 @@ type = 3
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Button3" type="Button" parent="MarginContainer/Slots/Draggables/Concepts/ConceptsContainer"]
+[node name="Button3" type="Button" parent="MarginContainer/Journal/Draggables/Concepts/ConceptsContainer"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_vertical = 3
@@ -424,7 +421,7 @@ type = 3
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Button4" type="Button" parent="MarginContainer/Slots/Draggables/Concepts/ConceptsContainer"]
+[node name="Button4" type="Button" parent="MarginContainer/Journal/Draggables/Concepts/ConceptsContainer"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_vertical = 3
@@ -441,7 +438,7 @@ type = 3
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Button5" type="Button" parent="MarginContainer/Slots/Draggables/Concepts/ConceptsContainer"]
+[node name="Button5" type="Button" parent="MarginContainer/Journal/Draggables/Concepts/ConceptsContainer"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_vertical = 3
@@ -458,7 +455,7 @@ type = 3
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Button6" type="Button" parent="MarginContainer/Slots/Draggables/Concepts/ConceptsContainer"]
+[node name="Button6" type="Button" parent="MarginContainer/Journal/Draggables/Concepts/ConceptsContainer"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_vertical = 3
@@ -475,7 +472,7 @@ type = 3
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Button7" type="Button" parent="MarginContainer/Slots/Draggables/Concepts/ConceptsContainer"]
+[node name="Button7" type="Button" parent="MarginContainer/Journal/Draggables/Concepts/ConceptsContainer"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_vertical = 3
@@ -492,7 +489,7 @@ type = 3
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Button8" type="Button" parent="MarginContainer/Slots/Draggables/Concepts/ConceptsContainer"]
+[node name="Button8" type="Button" parent="MarginContainer/Journal/Draggables/Concepts/ConceptsContainer"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_vertical = 3
@@ -509,12 +506,12 @@ type = 3
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Names" type="Panel" parent="MarginContainer/Slots/Draggables"]
+[node name="Names" type="Panel" parent="MarginContainer/Journal/Draggables"]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_7va00")
 
-[node name="Caption" type="Label" parent="MarginContainer/Slots/Draggables/Names"]
+[node name="Caption" type="Label" parent="MarginContainer/Journal/Draggables/Names"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -524,7 +521,7 @@ text = "NAMES:"
 label_settings = SubResource("LabelSettings_qak6a")
 horizontal_alignment = 1
 
-[node name="NamesContainer3" type="HFlowContainer" parent="MarginContainer/Slots/Draggables/Names"]
+[node name="NamesContainer3" type="HFlowContainer" parent="MarginContainer/Journal/Draggables/Names"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -535,7 +532,7 @@ offset_right = 21.0
 offset_bottom = -1.0
 script = ExtResource("3_3sxyp")
 
-[node name="Henry" type="Button" parent="MarginContainer/Slots/Draggables/Names/NamesContainer3"]
+[node name="Henry" type="Button" parent="MarginContainer/Journal/Draggables/Names/NamesContainer3"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -554,7 +551,7 @@ type = 2
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Button" type="Button" parent="MarginContainer/Slots/Draggables/Names/NamesContainer3"]
+[node name="Button" type="Button" parent="MarginContainer/Journal/Draggables/Names/NamesContainer3"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_vertical = 3
@@ -572,7 +569,7 @@ type = 2
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Button2" type="Button" parent="MarginContainer/Slots/Draggables/Names/NamesContainer3"]
+[node name="Button2" type="Button" parent="MarginContainer/Journal/Draggables/Names/NamesContainer3"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_vertical = 3
@@ -589,7 +586,7 @@ type = 3
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Button3" type="Button" parent="MarginContainer/Slots/Draggables/Names/NamesContainer3"]
+[node name="Button3" type="Button" parent="MarginContainer/Journal/Draggables/Names/NamesContainer3"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_vertical = 3
@@ -606,7 +603,7 @@ type = 3
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Button4" type="Button" parent="MarginContainer/Slots/Draggables/Names/NamesContainer3"]
+[node name="Button4" type="Button" parent="MarginContainer/Journal/Draggables/Names/NamesContainer3"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_vertical = 3
@@ -623,7 +620,7 @@ type = 3
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Button5" type="Button" parent="MarginContainer/Slots/Draggables/Names/NamesContainer3"]
+[node name="Button5" type="Button" parent="MarginContainer/Journal/Draggables/Names/NamesContainer3"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_vertical = 3
@@ -640,7 +637,7 @@ type = 3
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Button6" type="Button" parent="MarginContainer/Slots/Draggables/Names/NamesContainer3"]
+[node name="Button6" type="Button" parent="MarginContainer/Journal/Draggables/Names/NamesContainer3"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_vertical = 3
@@ -657,7 +654,7 @@ type = 3
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Button7" type="Button" parent="MarginContainer/Slots/Draggables/Names/NamesContainer3"]
+[node name="Button7" type="Button" parent="MarginContainer/Journal/Draggables/Names/NamesContainer3"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_vertical = 3
@@ -674,7 +671,7 @@ type = 3
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Button8" type="Button" parent="MarginContainer/Slots/Draggables/Names/NamesContainer3"]
+[node name="Button8" type="Button" parent="MarginContainer/Journal/Draggables/Names/NamesContainer3"]
 custom_minimum_size = Vector2(130, 50)
 layout_mode = 2
 size_flags_vertical = 3
@@ -691,40 +688,46 @@ type = 3
 DragPreview = ExtResource("2_d3p1u")
 metadata/_edit_group_ = true
 
-[node name="Panel" type="PanelContainer" parent="MarginContainer/Slots"]
+[node name="Slots" type="PanelContainer" parent="MarginContainer/Journal"]
 custom_minimum_size = Vector2(450, 0)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_8piws")
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Slots/Panel"]
+[node name="MarginContainer" type="Panel" parent="MarginContainer/Journal/Slots"]
 layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
+theme_override_styles/panel = SubResource("StyleBoxEmpty_op3f6")
 
-[node name="Answers" type="Label" parent="MarginContainer/Slots/Panel/MarginContainer"]
-custom_minimum_size = Vector2(440, 0)
+[node name="Label2" type="Label" parent="MarginContainer/Journal/Slots/MarginContainer"]
+visible = false
 layout_mode = 2
-size_flags_vertical = 1
-theme_override_constants/line_spacing = 150
-text = "Your name is             . You're a                  .
-This is your first                 . drag the            inside these slots to make deductions.
-There has been A                  .
-We Will try to           it.
+offset_left = 10.0
+offset_top = 221.0
+offset_right = 440.0
+offset_bottom = 386.0
+text = "
 
-"
-label_settings = SubResource("LabelSettings_x1cej")
-autowrap_mode = 3
-uppercase = true
-script = ExtResource("6_0napa")
 
-[node name="HENRY" type="Button" parent="MarginContainer/Slots/Panel/MarginContainer/Answers"]
-layout_mode = 0
-offset_left = 211.0
-offset_top = -3.0
-offset_right = 297.0
-offset_bottom = 37.0
+
+
+Almost right... one of the answers is incorrect!"
+label_settings = ExtResource("3_j2iv2")
+
+[node name="HFlowContainer" type="HFlowContainer" parent="MarginContainer/Journal/Slots/MarginContainer"]
+layout_mode = 2
+offset_left = 7.0
+offset_top = 58.0
+offset_right = 437.0
+offset_bottom = 646.0
+script = ExtResource("6_e0fxi")
+
+[node name="Your name is" type="Label" parent="MarginContainer/Journal/Slots/MarginContainer/HFlowContainer"]
+layout_mode = 2
+text = "YOUR NAME IS"
+label_settings = ExtResource("3_j2iv2")
+
+[node name="HENRY" type="Button" parent="MarginContainer/Journal/Slots/MarginContainer/HFlowContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_x05px")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_hn2oj")
@@ -732,12 +735,14 @@ script = ExtResource("3_4nshe")
 type = 2
 correct_answer = "HENRY"
 
-[node name="DETECTIVE" type="Button" parent="MarginContainer/Slots/Panel/MarginContainer/Answers"]
-layout_mode = 0
-offset_left = 36.0
-offset_top = 37.0
-offset_right = 157.0
-offset_bottom = 77.0
+[node name="Label" type="Label" parent="MarginContainer/Journal/Slots/MarginContainer/HFlowContainer"]
+layout_mode = 2
+text = ". YOU'RE A"
+label_settings = ExtResource("3_j2iv2")
+
+[node name="DETECTIVE" type="Button" parent="MarginContainer/Journal/Slots/MarginContainer/HFlowContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_x05px")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_hn2oj")
@@ -745,12 +750,14 @@ script = ExtResource("3_4nshe")
 type = 1
 correct_answer = "DETECTIVE"
 
-[node name="CASE" type="Button" parent="MarginContainer/Slots/Panel/MarginContainer/Answers"]
-layout_mode = 0
-offset_left = 246.0
-offset_top = 77.0
-offset_right = 365.0
-offset_bottom = 117.0
+[node name="Label2" type="Label" parent="MarginContainer/Journal/Slots/MarginContainer/HFlowContainer"]
+layout_mode = 2
+text = "AND THIS IS YOUR FIRST"
+label_settings = ExtResource("3_j2iv2")
+
+[node name="CASE" type="Button" parent="MarginContainer/Journal/Slots/MarginContainer/HFlowContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_x05px")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_0xu2w")
@@ -759,12 +766,14 @@ script = ExtResource("3_4nshe")
 type = 1
 correct_answer = "CASE"
 
-[node name="CLUES" type="Button" parent="MarginContainer/Slots/Panel/MarginContainer/Answers"]
-layout_mode = 0
-offset_left = 143.0
-offset_top = 117.0
-offset_right = 229.0
-offset_bottom = 157.0
+[node name="Label3" type="Label" parent="MarginContainer/Journal/Slots/MarginContainer/HFlowContainer"]
+layout_mode = 2
+text = ". DRAG THE"
+label_settings = ExtResource("3_j2iv2")
+
+[node name="CLUES" type="Button" parent="MarginContainer/Journal/Slots/MarginContainer/HFlowContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_x05px")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_hn2oj")
@@ -772,32 +781,62 @@ script = ExtResource("3_4nshe")
 type = 1
 correct_answer = "CLUES"
 
-[node name="MURDER" type="Button" parent="MarginContainer/Slots/Panel/MarginContainer/Answers"]
-layout_mode = 0
-offset_left = 254.0
-offset_top = 195.0
-offset_right = 379.0
-offset_bottom = 235.0
+[node name="Label4" type="Label" parent="MarginContainer/Journal/Slots/MarginContainer/HFlowContainer"]
+layout_mode = 2
+text = "INTO THESE SLOTS."
+label_settings = ExtResource("3_j2iv2")
+
+[node name="Label5" type="Label" parent="MarginContainer/Journal/Slots/MarginContainer/HFlowContainer"]
+layout_mode = 2
+text = "THERE'S BEEN ANOTHER"
+label_settings = ExtResource("3_j2iv2")
+
+[node name="MURDER" type="Button" parent="MarginContainer/Journal/Slots/MarginContainer/HFlowContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_x05px")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_d5weq")
 script = ExtResource("3_4nshe")
 correct_answer = "MURDER"
 
-[node name="SOLVE" type="Button" parent="MarginContainer/Slots/Panel/MarginContainer/Answers"]
-layout_mode = 0
-offset_left = 212.0
-offset_top = 234.0
-offset_right = 285.0
-offset_bottom = 274.0
+[node name="Label6" type="Label" parent="MarginContainer/Journal/Slots/MarginContainer/HFlowContainer"]
+layout_mode = 2
+text = ". YOU NEED TO"
+label_settings = ExtResource("3_j2iv2")
+
+[node name="SOLVE" type="Button" parent="MarginContainer/Journal/Slots/MarginContainer/HFlowContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_x05px")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_jg205")
 script = ExtResource("3_4nshe")
 correct_answer = "SOLVE"
 
-[node name="Label" type="Label" parent="MarginContainer/Slots/Panel/MarginContainer"]
+[node name="Label7" type="Label" parent="MarginContainer/Journal/Slots/MarginContainer/HFlowContainer"]
+layout_mode = 2
+text = "IT!"
+label_settings = ExtResource("3_j2iv2")
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/Journal/Slots"]
 visible = false
+layout_mode = 2
+color = Color(0, 0.4, 0, 0)
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Journal/Slots/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="Label" parent="MarginContainer/Journal/Slots/ColorRect/MarginContainer"]
 layout_mode = 2
 text = "
 

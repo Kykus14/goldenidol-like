@@ -4,7 +4,7 @@ const verb_style = preload("res://resources/verb.tres")
 const concept_style = preload("res://resources/concept.tres")
 const name_style = preload("res://resources/things.tres")
 
-func _ready():
+func _ready() -> void:
 	if get_parent().type == get_parent().Type.VERB:
 		add_theme_stylebox_override("normal", verb_style)
 		add_theme_stylebox_override("hover", verb_style)
@@ -15,7 +15,7 @@ func _ready():
 		add_theme_stylebox_override("normal", name_style)
 		add_theme_stylebox_override("hover", name_style)
 	
-func _process(delta):
+func _process(delta) -> void:
 	global_position = get_global_mouse_position()
 	if Input.is_action_just_released("left_click"):
 		queue_free()

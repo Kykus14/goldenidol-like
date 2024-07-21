@@ -52,7 +52,7 @@ func _get_drag_data(position: Vector2):
 		var drag_prev = DragPreview.instantiate()
 		drag_prev.text = get_child(0).text
 		add_child(drag_prev)
-			
+		
 		return data
 			
 func _can_drop_data(at_position, data):
